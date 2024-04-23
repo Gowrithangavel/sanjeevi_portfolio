@@ -1,0 +1,342 @@
+
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+a
+{
+    text-decoration: none;
+}
+
+a:hover
+{
+    text-decoration: none;
+}
+
+/******************************* NAV BAR *****************************/
+
+.nav-link 
+{
+    display: inline-block;
+    color: white;
+    font-weight: 500;
+    font-size: 1.6rem;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px 10%;
+    align-items: center;    
+    z-index: 100;
+    animation-delay: calc(.2s * var(--i));
+    opacity: 0;
+    animation: slideRight 1s ease forwards;
+}
+
+.nav-item a, .navbar-brand
+{
+    animation: slideTop .5s ease forwards;
+}
+
+.nav-link:hover, .navbar-brand:hover
+{
+    color: aqua;
+}
+
+.navbar-brand
+{
+    color: white;
+    font-weight: 800;
+    font-size: 2rem;
+    animation-delay: calc(.2s * var(--i));
+    animation: slideRight 1s ease forwards;
+}
+.navbar-toggler-icon
+{
+    color: white;
+    background-color: darkcyan;
+}
+
+
+/************************************ Keyframes Animation  ******************************/
+
+@keyframes slideRight
+{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideTop
+{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%
+    {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/************************************* body *****************************/
+
+body
+{
+    background: rgb(32, 28, 28); 
+    background-size: cover;
+    background-position: center;
+}
+
+.info, .about_grid
+{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 25px;
+    opacity: 0.7;
+}
+
+.info
+{
+    height: 500px;
+    margin-top: 10%;
+    background: black;
+}
+
+h2, h1, h4
+{
+    text-align: start;
+    color: white;
+    margin-left: 1%;
+}
+
+.info h2 span, .about_info h1 span, 
+.service-info h1 span, .con-box h1 span
+{
+    color: #00ffff;
+}   
+
+.social_icon
+{
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    width: 50px;
+    display: inline-flex;
+    background: transparent;
+    border: 2px solid black;
+    border-radius: 50%;
+    font-size: 1.94rem; 
+    margin: 20px;
+    text-decoration: none;
+    transition: .5s ease;
+}
+
+.bi-twitter
+{
+    color: #00ffff;
+}
+
+.bi-instagram
+{
+    color: rgb(177, 19, 93);
+}
+
+
+.bi-twitter:hover, .bi-instagram:hover
+{
+    color: #1f242d;
+}
+
+
+.social_icon:hover
+{
+    background: #00ffff;
+    color: #1f242d;
+    box-shadow: 0 0 20px #00ffff;
+}
+
+.btn, .submit-btn
+{
+    display: inline-block;
+    background: #00ffff;
+    padding: 12px;
+    border-radius: 20px;
+    box-shadow: 0 0 20px #00ffff;
+    width: 180px;
+}
+
+.btn
+{
+    margin-left: 10%;
+}
+
+.maran-logo
+{
+    border: 2px solid #00ffff;
+    border-radius: 5%;
+}
+
+/*************************************************** About *****************************************************/
+
+.about
+{
+    background-color: rgb(32, 28, 28);
+}
+
+
+h4
+{
+    font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.about_grid
+{
+    height: 600px;
+    width: 80%;
+    margin-top: 2%;
+    background: transparent;
+    margin-left: 8%;
+}
+
+.content_about
+{
+    margin-left: 10%;
+}
+
+
+/******************************************************* Services ***********************************************/
+
+.service-info
+{
+    height: 90vh;
+    width: 66rem;
+}
+
+
+.card
+{
+    background: #4e555c;
+    color: #fff;
+    height: 19rem;
+    border-radius: 10px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+
+
+.card-body
+{
+    /* padding: 45px; */
+    font-size: 30px;
+}
+
+
+/******************************************************** Contact ***************************************************/
+
+.contact-back
+{
+    background: rgb(32, 28, 28);
+    background-size: cover;
+    background-position: center;
+}
+
+.con-box
+{
+    border-radius: 20px;
+    margin-top: 3%;
+    margin-bottom: 2%;
+    opacity: 0.85;
+}
+
+.con-row
+{
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+}
+
+.form-control, .form-control-message
+{
+    display: block;
+    line-height: 1.5;
+    width: 100%;
+    color: #4e555c;
+    background: white;
+    padding-left: 10px;
+}
+
+.form-control-message
+{
+    border-radius: 15px;
+}
+
+.contact-form
+{
+    position: relative;
+}
+.contact-form label
+{
+    color: white;
+    font-size: 18   px;
+    text-transform: capitalize !important;
+    position: relative;
+    left: 0px !important;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+}
+
+.submit-btn
+{
+    margin-top: 3%;
+}
+
+
+/********************************************************* skill **************************************************/
+/* Custom CSS for styling */
+/* CSS styles */
+
+/* Body */
+
+/* Navbar */
+.navbar {
+    background-color: #343a40;
+}
+
+.navbar-brand,
+.navbar-nav .nav-link {
+    color: #ffffff;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #adb5bd;
+}
+
+/* Card */
+.card {
+    
+    border: none;
+}
+.card-body
+{
+    background: #4e555c;
+}
+.card-title {
+    color: #60d5f8;
+}
+
+.card-text {
+    color: #f4f0f5;
+}
